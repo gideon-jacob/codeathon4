@@ -1,34 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Timeline from './components/Timeline';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="max-w-7xl mx-auto p-8 text-center">
-      <div className="flex justify-center">
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="h-24 p-6 will-change-[filter] transition-[filter] duration-300 hover:drop-shadow-[0_0_2em_#646cffaa]" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="h-24 p-6 will-change-[filter] transition-[filter] duration-300 hover:drop-shadow-[0_0_2em_#61dafbaa] animate-[spin_20s_linear_infinite]" alt="React logo" />
-        </a>
-      </div>
-      <h1 className="text-5xl font-bold my-8">Vite + React</h1>
-      <div className="card p-8">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p className="mt-4">
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="text-[#888]">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-red-900 selection:text-white">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Timeline />
+      </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
